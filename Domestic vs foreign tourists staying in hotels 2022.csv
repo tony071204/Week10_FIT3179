@@ -1,4 +1,4 @@
-Entity,Year,Domestic tourists staying in hotels and similar establishments,Foreign guests in hotels and similar establishments,World regions according to OWID
+Entity,Year,Domestic tourists staying in hotels,Foreign tourists staying in hotels, Region
 Albania,2022,644000,846000,Europe
 Algeria,2022,2848000,202000,Africa
 Angola,2022,421000,275000,Africa
@@ -60,3 +60,4 @@ Switzerland,2022,10581900,7735700,Europe
 Tunisia,2022,2882000,2691000,Africa
 Turkey,2022,45963000,45902000,Asia
 Zimbabwe,2022,461000,131000,Africa
+
