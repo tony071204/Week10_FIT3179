@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local vs. Foreign Guests in Hotels 2022</title>
+    <title>Tourism Data Visualization</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -14,32 +14,55 @@
             background-color: #f5f5f5;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             background-color: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         h1 {
             color: #333;
             text-align: center;
+            margin-bottom: 40px;
         }
-        #vis {
+        h2 {
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .chart-container {
             display: flex;
             justify-content: center;
+            margin-bottom: 50px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Local vs. Foreign Guests in Hotels 2022</h1>
-        <div id="vis"></div>
+        <h1>Tourism Statistics Dashboard 2022</h1>
+        
+        <h2>Air Passengers</h2>
+        <div id="vis-air-passengers" class="chart-container"></div>
+        
+        <h2>Domestic vs Foreign Hotel Guests</h2>
+        <div id="vis-hotel-guests" class="chart-container"></div>
     </div>
+    
     <script>
+        // Load Air Passengers chart
+        fetch("air_passengers.vg.json")
+            .then((response) => response.json())
+            .then((spec) => vegaEmbed("#vis-air-passengers", spec, {"actions": false}))
+            .catch((error) => console.error("Error loading air passengers chart:", error));
+        
+        // Load Domestic vs Foreign Tourists chart
         fetch("domestic_vs_foreign_tourists.vg.json")
             .then((response) => response.json())
-            .then((spec) => vegaEmbed("#vis", spec, {"actions": false}));
+            .then((spec) => vegaEmbed("#vis-hotel-guests", spec, {"actions": false}))
+            .catch((error) => console.error("Error loading hotel guests chart:", error));
     </script>
 </body>
 </html>

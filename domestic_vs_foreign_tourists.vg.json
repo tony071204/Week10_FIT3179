@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
+  "width": 900,
   "height": 450,
   "title": "Local vs. foreign tourists in hotels 2022(log scale)",
   "data": {
@@ -42,14 +42,32 @@
       "type": "quantitative",
       "title": "Foreign tourists staying in hotels",
       "scale": {"type": "log", "domain": [10000, 200000000]},
-      "axis": {"format": "~s", "grid": false, "tickCount": 6, "ticks": false}
+      "axis": {
+        "format": "~s",
+        "grid": false,
+        "tickCount": 6,
+        "ticks": false,
+        "titleFont": "sans-serif",
+        "titleFontSize": 12,
+        "labelFont": "sans-serif",
+        "labelFontSize": 11
+      }
     },
     "y": {
       "field": "Domestic tourists staying in hotels ",
       "type": "quantitative",
       "title": "Domestic tourists staying in hotels",
       "scale": {"type": "log", "domain": [1000, 1000000000]},
-      "axis": {"format": "~s", "grid": false, "tickCount": 6, "ticks": false}
+      "axis": {
+        "format": "~s",
+        "grid": false,
+        "tickCount": 6,
+        "ticks": false,
+        "titleFont": "sans-serif",
+        "titleFontSize": 12,
+        "labelFont": "sans-serif",
+        "labelFontSize": 11
+      }
     }
   },
   "layer": [
@@ -118,5 +136,10 @@
       }
     }
   ],
-  "config": {}
+  "config": {
+    "axis": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif"
+    }
+  }
 }
