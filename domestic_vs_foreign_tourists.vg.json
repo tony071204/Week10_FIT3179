@@ -95,7 +95,19 @@
               "#2ca02c",
               "#9467bd"
             ]
-          }
+          },
+          "legend": {
+          "titleAlign": "center",
+          "titleFontSize": 14,
+          "titleFontWeight": "bold",
+          "titlePadding": 50,
+          "labelFontSize": 12,
+          "symbolSize": 200,
+          "orient": "right",
+          "offset": 10,
+          "direction": "vertical"
+        }
+          
         },
         "tooltip": [
           {"field": "Entity", "type": "nominal", "title": "Country"},
